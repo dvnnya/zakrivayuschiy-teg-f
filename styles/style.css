@@ -24,6 +24,10 @@
   background-attachment: fixed;
 }
 
+.page::-webkit-scrollbar {
+  display: none;
+}
+
 .header {
   font-family: var(--accent-font), fantasy;
   margin-block: clamp(100px, calc(100px + (101 - 100) * ((100vw - 375px) / (1440 - 375))), 101px);
@@ -69,7 +73,7 @@
 .card__image {
   position: relative;
   block-size: clamp(370px, calc(370px + (699 - 374) * ((100vw - 375px) / (1440 - 375))), 699px);
-  inline-size: clamp(371px, calc(371px + (696 - 371) * ((100vw - 375px) / (1440 - 375))), 696px);
+  inline-size: 100%;
 }
 
 .card__photo {
@@ -339,6 +343,7 @@
   inline-size: 341px;
   font-family: var(--accent-font), fantasy;
   font-size: 14px;
+  overflow: hidden;
 }
 
 .dialog::backdrop {
@@ -382,7 +387,7 @@
   }
 
   .header__title {
-    font-size: clamp(2rem, 1.6136rem + 6.1818vw, 3.0625rem);
+    font-size: clamp(2.3125rem, -2.0511rem + 21.8182vw, 3.0625rem);
   }
 
   .card__image {
