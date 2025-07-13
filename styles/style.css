@@ -24,10 +24,6 @@
   background-attachment: fixed;
 }
 
-.page::-webkit-scrollbar {
-  display: none;
-}
-
 .header {
   font-family: var(--accent-font), fantasy;
   margin-block: clamp(100px, calc(100px + (101 - 100) * ((100vw - 375px) / (1440 - 375))), 101px);
@@ -282,11 +278,11 @@
   z-index: 1;
 }
 
-.card__like-button:hover::after {
+.button:hover::after {
   width: 100%;
 }
 
-.card__like-button:focus-visible {
+.button:focus-visible {
   outline: none;
   box-shadow: 2px 2px 0 0 black;
 }
@@ -307,21 +303,12 @@
   justify-content: center;
 }
 
-.footer__button-save {
+.dialog__button-save {
   padding: 15px 20px;
   flex-direction: column;
   gap: 8px;
   margin-block-start: clamp(50px, calc(50px + (1 * (1440px - 100vw)) / (1440 - 375)), 51px);
   margin-block-end: 100px;
-}
-
-.footer__button-save:hover::after {
-  width: 100%;
-}
-
-.footer__button-save:focus-visible {
-  outline: none;
-  box-shadow: 2px 2px 0 0 black;
 }
 
 .floppy-icon {
@@ -371,15 +358,6 @@
   text-transform: uppercase;
 }
 
-.dialog__button:hover::after {
-  width: 100%;
-}
-
-.dialog__button:focus-visible {
-  outline: none;
-  box-shadow: 2px 2px 0 0 black;
-}
-
 @media (width < 375px) {
   .header,
   .main {
@@ -400,7 +378,7 @@
     padding-block: 5px;
   }
 
-  .footer__button-save {
+  .dialog__button-save {
     flex-direction: initial;
   }
 
